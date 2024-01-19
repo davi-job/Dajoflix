@@ -1,0 +1,34 @@
+:root {
+	--primary-color: #e50914;
+	--background-color: #141414;
+	--text-color: #e5e5e5;
+	--text-color-2: #c3c3c3;
+	--text-faded-color: #909090;
+	--accent-color: #53b9c5;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-weight: 400;
+	font-family: "Roboto", sans-serif;
+
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
+body {
+	font-size: 1.6rem;
+	line-height: 1.3;
+
+	min-height: 100dvh;
+	max-width: 100vw;
+
+	overflow-x: hidden;
+}
