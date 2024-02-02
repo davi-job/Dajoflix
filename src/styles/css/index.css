@@ -7,6 +7,11 @@
 	--accent-color: #53b9c5;
 }
 
+@font-face {
+	font-family: "Netflix Sans";
+	src: url("../fonts/NetflixSans-Regular.otf") format("opentype");
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -17,7 +22,7 @@
 html {
 	font-size: 62.5%;
 	font-weight: 400;
-	font-family: "Roboto", sans-serif;
+	font-family: "Netflix Sans", sans-serif;
 
 	max-width: 100vw;
 	overflow-x: hidden;
@@ -27,8 +32,28 @@ body {
 	font-size: 1.6rem;
 	line-height: 1.3;
 
+	background-color: var(--background-color);
+	color: var(--text-color);
+
 	min-height: 100dvh;
 	max-width: 100vw;
 
 	overflow-x: hidden;
+}
+
+.container {
+	padding: 0 5.6rem;
+}
+
+.btn {
+	background-color: transparent;
+	border: none;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	cursor: pointer;
+
+	color: var(--text-color);
 }

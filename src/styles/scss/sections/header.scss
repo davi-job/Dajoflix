@@ -1,0 +1,138 @@
+.header {
+	.header__bar {
+		padding: 2.2rem 5.6rem;
+		position: relative;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		position: fixed;
+		top: 0;
+
+		width: 100%;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(
+				to bottom,
+				rgba(0, 0, 0, 1),
+				rgba(0, 0, 0, 0)
+			);
+			z-index: -1;
+		}
+
+		.header__bar-left {
+			display: flex;
+			align-items: center;
+			gap: 4.4rem;
+
+			.header__logo {
+				width: 9.2rem;
+			}
+
+			.header__nav-list {
+				display: flex;
+				align-items: center;
+				gap: 2rem;
+				list-style: none;
+
+				.header__nav-item {
+					a:link,
+					a:visited {
+						font-size: 1.4rem;
+						font-weight: 600;
+						color: var(--text-color-2);
+						text-decoration: none;
+						transition: all 0.3s ease-in-out;
+					}
+
+					a:hover,
+					a:active {
+						color: var(--text-faded-color);
+					}
+
+					a:link.selected,
+					a:visited.selected {
+						color: #fff;
+					}
+
+					a:hover.selected,
+					a:active.selected {
+						color: #fff;
+					}
+				}
+			}
+		}
+
+		.header__bar-right {
+			display: flex;
+			align-items: center;
+			gap: 2.4rem;
+
+			.header__search-btn {
+				.header__search-icon {
+					transition: scale 0.15s ease-in-out;
+				}
+
+				&:hover {
+					.header__search-icon {
+						scale: 1.2;
+					}
+				}
+			}
+
+			.header__notifications-btn {
+				.header__notifications-icon {
+					transition: scale 0.15s ease-in-out;
+				}
+
+				&:hover {
+					.header__notifications-icon {
+						scale: 1.2;
+					}
+				}
+			}
+
+			.header__profile {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+
+				height: 3.2rem;
+
+				margin: -2.2rem 0;
+				padding-right: 1.8rem;
+
+				cursor: pointer;
+
+				.header__profile-img {
+					width: 100%;
+					height: 100%;
+					border-radius: 4px;
+				}
+
+				.header__profile-icon {
+					stroke: #fff;
+					fill: rgb(255, 255, 255);
+					opacity: 1;
+
+					rotate: -180deg;
+
+					transition: rotate 0.25s ease-in-out;
+				}
+
+				&:hover {
+					.header__profile-icon {
+						rotate: 0deg;
+					}
+				}
+			}
+		}
+	}
+}
